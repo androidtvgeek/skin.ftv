@@ -192,7 +192,7 @@
 						<focusedcolor>ff222222</focusedcolor>
 						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
 						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>!StringCompare(ListItem.Label,..)</visible>
+						<enabled>!StringCompare(ListItem.Label,..)</enabled>
 					</control>
 					<control id="2003" type="button">
 						<top>110</top>
@@ -269,75 +269,6 @@
 						<alttexturefocus border="3,5,6,8">views/button_fo.png</alttexturefocus>
 						<alttexturenofocus border="3,3,6,6">views/button_nf.png</alttexturenofocus>
 					</control>
-				</control>
-				<!-- Details -->
-				<control type="group">
-					<visible>!Control.IsVisible(54)</visible>
-					<control type="textbox">
-						<top>107</top>
-						<width>1192</width>
-						<height>120</height>
-						<align>left</align>
-						<font>Light32</font>
-						<pagecontrol>98</pagecontrol>
-						<autoscroll>false</autoscroll>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>[COLOR 00ffffff][B]$INFO[ListItem.Label,,---][/B][/COLOR]$INFO[ListItem.Label2]</label>
-					</control>
-					<control type="textbox">
-						<top>97</top>
-						<width>1192</width>
-						<height>120</height>
-						<align>left</align>
-						<font>Bold32</font>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-					<control id="98" type="scrollbar">
-						<top>105</top>
-						<width>1192</width>
-						<height>120</height>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
-					</control>
-					<!-- More button -->
-					<control id="3000" type="button">
-						<left>1194</left>
-						<top>192</top>
-						<width>37</width>
-						<height>23</height>
-						<onup>2000</onup>
-						<ondown>noop</ondown>
-						<onleft>50</onleft>
-						<onright>50</onright>
-						<onclick>RunScript(script.toolbox,info=textviewer,header=$INFO[ListItem.Label],text='"$INFO[ListItem.Label2]"')</onclick>
-						<visible>Control.IsVisible(98)</visible>
-						<texturefocus>views/more_fo.png</texturefocus>
-						<texturenofocus>views/more_nf.png</texturenofocus>
-						<visible>!Window.IsVisible(textviewer)</visible>
-					</control>
-					<!-- More button -->
-					<control type="image">
-						<left>1194</left>
-						<top>192</top>
-						<width>37</width>
-						<height>23</height>
-						<texture>views/more_nf.png</texture>
-						<visible>Window.IsVisible(textviewer)</visible>
-					</control>
-				</control>
-				<!-- Time -->
-				<control type="textbox">
-					<top>105</top>
-					<width>1192</width>
-					<height>120</height>
-					<align>left</align>
-					<font>Light32</font>
-					<pagecontrol>98</pagecontrol>
-					<autoscroll>false</autoscroll>
-					<textcolor>ffbcbcbc</textcolor>
-					<label>$INFO[ListItem.Label2]</label>
-					<visible>Window.IsVisible(musicplaylist)</visible>
 				</control>
 			</control>
 		</control>

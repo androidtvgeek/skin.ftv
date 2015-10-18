@@ -51,7 +51,7 @@
 					<font>Light39</font>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ffdadada</focusedcolor>
-					<hinttext>Joe Bloggs</hinttext>
+					<hinttext>[COLOR ff414141]Joe Bloggs[/COLOR]</hinttext>
 				</control>
 				<!-- Edit Text line -->
 				<control type="image">

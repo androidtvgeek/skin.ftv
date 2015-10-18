@@ -102,135 +102,85 @@
 			<!-- Formed -->
 			<control type="group">
 				<top>57</top>
-				<height>36</height>
+				<height>40</height>
 				<visible>Container.Content(Artists)</visible>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[21894]:</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
-					<height>36</height>
+					<height>40</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[21894]:-[/B][/COLOR]$INFO[ListItem.Property(Artist_Formed)]</label>
+					<label>[LIGHT]$INFO[ListItem.Property(Artist_Formed),[B]$LOCALIZE[21894]:[/B] ][/LIGHT]</label>
 				</control>
 			</control>
 			<!-- Year -->
 			<control type="group">
 				<top>57</top>
-				<height>36</height>
+				<height>40</height>
 				<visible>Container.Content(Albums)</visible>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[345]:</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
-					<height>36</height>
+					<height>40</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[345]:-[/B][/COLOR]$INFO[ListItem.Year]</label>
+					<label>[LIGHT]$INFO[ListItem.Year,[B]$LOCALIZE[345]:[/B] ][/LIGHT]</label>
 				</control>
 			</control>
 			<!-- Genre -->
 			<control type="group">
 				<top>97</top>
-				<height>36</height>
+				<height>40</height>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[515]:</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
-					<height>36</height>
+					<height>40</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[515]:-[/B][/COLOR]$INFO[ListItem.Genre]</label>
+					<label>[LIGHT]$INFO[ListItem.Genre,[B]$LOCALIZE[515]:[/B] ][/LIGHT]</label>
 				</control>
 			</control>
 			<!-- Active -->
 			<control type="group">
 				<top>137</top>
-				<height>36</height>
+				<height>40</height>
 				<visible>Container.Content(Artists)</visible>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[19074]</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
-					<height>36</height>
+					<height>40</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[19074]-[/B][/COLOR]$INFO[ListItem.Property(Artist_YearsActive)]</label>
+					<label>[LIGHT]$INFO[ListItem.Property(Artist_YearsActive),[B]$LOCALIZE[19074]:[/B] ][/LIGHT]</label>
 				</control>
 			</control>
 			<!-- Artist -->
 			<control type="group">
 				<top>137</top>
-				<height>36</height>
+				<height>40</height>
 				<visible>Container.Content(Albums)</visible>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[557]:</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
-					<height>36</height>
+					<height>40</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[557]:-[/B][/COLOR]$INFO[ListItem.Artist]</label>
+					<label>[LIGHT]$INFO[ListItem.Artist,[B]$LOCALIZE[557]:[/B] ][/LIGHT]</label>
 				</control>
 			</control>
 			<!-- Star rating -->

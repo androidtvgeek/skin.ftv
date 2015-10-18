@@ -50,11 +50,11 @@
 				<width>788</width>
 				<height>454</height>
 				<align>left</align>
-				<font>Light36</font>
+				<font>Reg36Spaced</font>
 				<pagecontrol>3000</pagecontrol>
 				<autoscroll>false</autoscroll>
 				<textcolor>ffdadada</textcolor>
-				<label>[B][COLOR ffffffff]$INFO[Control.GetLabel(1),,[CR]][/B][/COLOR]$INFO[Control.GetLabel(5)]</label>
+				<label>[B][COLOR ffffffff]$INFO[Control.GetLabel(1),,[CR]][/B][/COLOR][LIGHT]$INFO[Control.GetLabel(5)][/LIGHT]</label>
 			</control>
 			<!-- Arrow down -->
 			<control type="image">

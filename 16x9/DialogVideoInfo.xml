@@ -202,7 +202,7 @@
 			<!-- Star rating / Votes / Rating -->
 			<control type="grouplist">
 				<top>100</top>
-				<height>36</height>
+				<height>40</height>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
@@ -302,7 +302,7 @@
 			<!-- Starring -->
 			<control type="grouplist">
 				<top>297</top>
-				<height>36</height>
+				<height>40</height>
 				<itemgap>20</itemgap>
 				<include>DialogVideoInfoAnimation</include>
 				<orientation>horizontal</orientation>
@@ -332,7 +332,7 @@
 			<control type="grouplist">
 				<top>339</top>
 				<width>1192</width>
-				<height>36</height>
+				<height>40</height>
 				<itemgap>20</itemgap>
 				<include>DialogVideoInfoAnimation</include>
 				<orientation>horizontal</orientation>
@@ -362,7 +362,7 @@
 			<control type="grouplist">
 				<top>339</top>
 				<width>1192</width>
-				<height>36</height>
+				<height>40</height>
 				<itemgap>20</itemgap>
 				<include>DialogVideoInfoAnimation</include>
 				<orientation>horizontal</orientation>
@@ -1233,7 +1233,7 @@
 			<!-- Info -->
 			<control type="grouplist">
 				<left>575</left>
-				<top>267</top>
+				<top>287</top>
 				<width>1192</width>
 				<height>50</height>
 				<itemgap>8</itemgap>
@@ -1243,33 +1243,27 @@
 				<animation delay="300" easing="inout" effect="fade" end="100" start="0" time="120" tween="sine">Visible</animation>
 				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
 				<control type="label">
-					<top>2</top>
 					<width>auto</width>
-					<height>50</height>
+					<height>24</height>
 					<align>left</align>
-					<aligny>top</aligny>
 					<font>Bold31</font>
 					<textcolor>ffbcbcbc</textcolor>
 					<label>$INFO[Container(50).ListItem.Label]</label>
 					<visible>Control.HasFocus(50)</visible>
 				</control>
 				<control type="label">
-					<top>2</top>
 					<width>auto</width>
-					<height>50</height>
+					<height>24</height>
 					<align>left</align>
-					<aligny>top</aligny>
 					<font>Bold31</font>
 					<textcolor>ffbcbcbc</textcolor>
 					<label>$INFO[Container(5000).ListItem.Property(Title)]</label>
 					<visible>Control.HasFocus(5000)</visible>
 				</control>
 				<control type="label">
-					<top>18</top>
 					<width>auto</width>
-					<height>50</height>
+					<height>29</height>
 					<align>left</align>
-					<aligny>top</aligny>
 					<font>Light24</font>
 					<textcolor>ffbcbcbc</textcolor>
 					<label>$INFO[Container(50).ListItem.Label2,$LOCALIZE[20347] ,]</label>

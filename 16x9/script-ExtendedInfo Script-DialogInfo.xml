@@ -18,18 +18,6 @@
 		<control id="1150" type="list" />
 		<control id="1250" type="list" />
 		<control id="1350" type="list" />
-		<!-- Hidden Plot -->
-		<control type="textbox">
-			<left>-1200</left>
-			<width>1192</width>
-			<height>160</height>
-			<align>left</align>
-			<font>Light30Spaced</font>
-			<pagecontrol>96</pagecontrol>
-			<autoscroll>false</autoscroll>
-			<textcolor>ffbbbbbb</textcolor>
-			<label>[COLOR 00ffffff][B]$LOCALIZE[21887]-[/B][/COLOR]$INFO[Window.Property(actor.Biography)]</label>
-		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
@@ -61,7 +49,7 @@
 					<ondown>7001</ondown>
 					<onleft>Close</onleft>
 					<onright condition="!IsEmpty(Container(150).ListItemNoWrap(0).Label)">150</onright>
-					<onright condition="IsEmpty(Container(150).ListItemNoWrap(0).Label) + Control.IsVisible(96)">132</onright>
+					<onright condition="IsEmpty(Container(150).ListItemNoWrap(0).Label) + Control.IsVisible(96)">3000</onright>
 					<onfocus>ClearProperty(StarredInTV,home)</onfocus>
 					<font>Light35</font>
 					<textcolor>ffdadada</textcolor>
@@ -112,24 +100,14 @@
 					<visible>!IsEmpty(Container(150).ListItem(0).Label) + !IsEmpty(Window.Property(actor.Birthday))</visible>
 					<animation condition="Control.HasFocus(150) | Control.HasFocus(250)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(150) + !Control.HasFocus(250)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[21893]:</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height max="162">auto</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[21893]:-[/B][/COLOR]$INFO[Window.Property(actor.Birthday)]</label>
+						<label>[COLOR ff717171][B]$LOCALIZE[21893][/B][/COLOR]  [LIGHT]$INFO[Window.Property(actor.Birthday)][/LIGHT]</label>
 						<include>DialogVideoInfoAnimation</include>
 					</control>
 				</control>
@@ -140,31 +118,21 @@
 					<include>DialogVideoInfoAnimation</include>
 					<animation condition="Control.HasFocus(150) | Control.HasFocus(250)" effect="slide" end="0,-71" start="0,0" time="200">Conditional</animation>
 					<!-- Biography -->
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[21887]</label>
-						<visible>!IsEmpty(Window.Property(actor.Biography))</visible>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height max="160">auto</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[21887]-[/B][/COLOR]$INFO[Window.Property(actor.Biography)]</label>
+						<pagecontrol>96</pagecontrol>
+						<label>[COLOR ff717171][B]$LOCALIZE[21887][/B][/COLOR]  [LIGHT]$INFO[Window.Property(actor.Biography)][/LIGHT]</label>
 						<visible>!IsEmpty(Window.Property(actor.Biography))</visible>
 					</control>
 					<!-- More button -->
-					<control id="132" type="button">
-						<left>1194</left>
-						<top>126</top>
+					<control id="3000" type="button">
+						<left>1174</left>
+						<top>130</top>
 						<width>37</width>
 						<height>23</height>
 						<onup>Close</onup>
@@ -172,6 +140,8 @@
 						<ondown condition="Control.IsVisible(250)">250</ondown>
 						<onleft>7000</onleft>
 						<onright>8</onright>
+						<onclick>SetProperty(OpenTextViewer,1,home)</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[Window.Property(actor.Biography)]"')</onclick>
 						<visible>Control.IsVisible(96)</visible>
 						<include>DialogVideoInfoAnimation</include>
 						<texturefocus>views/more_fo.png</texturefocus>
@@ -187,24 +157,14 @@
 					<visible>!IsEmpty(Container(150).ListItem(0).Label)</visible>
 					<animation condition="Control.HasFocus(150) | Control.HasFocus(250)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 					<animation condition="!Control.HasFocus(150) + !Control.HasFocus(250)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[31108]:</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height max="162">auto</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[31108]:-[/B][/COLOR]$VAR[MovieList]</label>
+						<label>[COLOR ff717171][B]$LOCALIZE[31108][/B][/COLOR]  [LIGHT]$VAR[MovieList][/LIGHT]</label>
 						<include>DialogVideoInfoAnimation</include>
 					</control>
 				</control>
@@ -221,7 +181,7 @@
 				<height>32</height>
 				<font>Bold30</font>
 				<textcolor>ff717171</textcolor>
-				<label>$INFO[Window.Property(actor.title),Titles with ]</label>
+				<label>$INFO[Window.Property(actor.title),$LOCALIZE[31204] ]</label>
 				<visible>IsEmpty(Window(home).Property(StarredInTV)) + !IsEmpty(Container(150).ListItem.Label) + !Control.HasFocus(150)</visible>
 				<animation delay="400" effect="fade" end="100" start="0" time="200">Visible</animation>
 				<animation effect="fade" end="0" start="100" time="0">Hidden</animation>
@@ -232,7 +192,7 @@
 				<top>-271</top>
 				<width>2600</width>
 				<height>576</height>
-				<onup condition="Control.IsVisible(96)">132</onup>
+				<onup condition="Control.IsVisible(96)">3000</onup>
 				<onup condition="!Control.IsVisible(96)">Close</onup>
 				<ondown>noop</ondown>
 				<onleft>7000</onleft>
@@ -535,7 +495,7 @@
 				<top>-271</top>
 				<width>2600</width>
 				<height>576</height>
-				<onup condition="Control.IsVisible(96)">132</onup>
+				<onup condition="Control.IsVisible(96)">3000</onup>
 				<onup condition="!Control.IsVisible(96)">Close</onup>
 				<ondown>noop</ondown>
 				<onleft>7001</onleft>

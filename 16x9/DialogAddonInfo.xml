@@ -93,24 +93,14 @@
 				<include>DialogVideoInfoAnimation</include>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[146]</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
 					<height>36</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[146]-[/B][/COLOR]$INFO[ListItem.Property(Addon.Type)]</label>
+					<label>[B]$LOCALIZE[146][/B] [LIGHT]$INFO[ListItem.Property(Addon.Type)][/LIGHT]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 			</control>
@@ -122,24 +112,14 @@
 				<include>DialogVideoInfoAnimation</include>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[24051]</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
 					<height>36</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[24051]-[/B][/COLOR]$INFO[ListItem.Property(Addon.Version)]</label>
+					<label>[B]$LOCALIZE[24051][/B] [LIGHT]$INFO[ListItem.Property(Addon.Version)][/LIGHT]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 			</control>
@@ -151,24 +131,14 @@
 				<include>DialogVideoInfoAnimation</include>
 				<animation condition="Control.HasFocus(1500) | Control.HasFocus(2500)" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<animation condition="!Control.HasFocus(1500) + !Control.HasFocus(2500)" delay="200" effect="fade" end="100" start="0" time="80">Conditional</animation>
-				<control type="label">
-					<top>3</top>
-					<width>1192</width>
-					<height>30</height>
-					<align>left</align>
-					<font>Bold30</font>
-					<scroll>false</scroll>
-					<textcolor>ff717171</textcolor>
-					<label>$LOCALIZE[31151]:</label>
-				</control>
 				<control type="textbox">
 					<width>1192</width>
 					<height>76</height>
 					<align>left</align>
-					<font>Light30Spaced</font>
+					<font>Reg30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<label>[COLOR 00ffffff][B]$LOCALIZE[31151]:-[/B][/COLOR]$INFO[ListItem.Property(Addon.Creator)]</label>
+					<label>[B]$LOCALIZE[31151]:[/B] [LIGHT]$INFO[ListItem.Property(Addon.Creator)][/LIGHT]</label>
 					<include>DialogVideoInfoAnimation</include>
 				</control>
 			</control>

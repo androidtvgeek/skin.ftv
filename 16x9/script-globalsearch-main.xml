@@ -245,20 +245,11 @@
 								<width>1192</width>
 								<height>160</height>
 								<align>left</align>
-								<font>Light32</font>
+								<font>Reg30Spaced</font>
 								<pagecontrol>96</pagecontrol>
 								<autoscroll>false</autoscroll>
 								<textcolor>ffbcbcbc</textcolor>
-								<label>[COLOR 00ffffff][B]$VAR[SearchLabel,,---][/B][/COLOR]$VAR[SearchPlot]</label>
-							</control>
-							<control type="textbox">
-								<top>135</top>
-								<width>1192</width>
-								<height>160</height>
-								<align>left</align>
-								<font>Bold32</font>
-								<textcolor>ffbcbcbc</textcolor>
-								<label>$VAR[SearchLabel]</label>
+								<label>[B]$VAR[SearchLabel][/B] [LIGHT]$VAR[SearchPlot][/LIGHT]</label>
 							</control>
 							<control id="96" type="scrollbar">
 								<top>143</top>
@@ -266,31 +257,6 @@
 								<height>160</height>
 								<showonepage>false</showonepage>
 								<orientation>vertical</orientation>
-							</control>
-							<!-- More button -->
-							<control id="3000" type="button">
-								<left>1194</left>
-								<top>272</top>
-								<width>37</width>
-								<height>23</height>
-								<onup>1000</onup>
-								<ondown>noop</ondown>
-								<onleft>50</onleft>
-								<onright>50</onright>
-								<onclick>RunScript(script.toolbox,info=textviewer,header=$VAR[SearchLabel],text='"$VAR[SearchPlot]"')</onclick>
-								<visible>Control.IsVisible(96)</visible>
-								<texturefocus>views/more_fo.png</texturefocus>
-								<texturenofocus>views/more_nf.png</texturenofocus>
-								<visible>!Window.IsVisible(textviewer)</visible>
-							</control>
-							<!-- More button -->
-							<control type="image">
-								<left>1194</left>
-								<top>192</top>
-								<width>37</width>
-								<height>23</height>
-								<texture>views/more_nf.png</texture>
-								<visible>Window.IsVisible(textviewer)</visible>
 							</control>
 						</control>
 					</control>
@@ -1470,7 +1436,6 @@
 							<onup>211</onup>
 							<onup>SetProperty(Movement,1)</onup>
 							<onup condition="!Window.IsVisible(1104)">SetProperty(Fade,1,Home)</onup>
-							<ondown>999</ondown>
 							<ondown condition="!Window.IsVisible(1101)">SetProperty(BounceDown,1,Home)</ondown>
 							<ondown condition="!Window.IsVisible(1104)">SetProperty(Fade,1,Home)</ondown>
 							<onleft>Back</onleft>

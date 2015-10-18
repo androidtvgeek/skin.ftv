@@ -852,3 +852,7 @@ msgstr ""
 msgctxt "#31203"
 msgid "Square Info"
 msgstr ""
+
+msgctxt "#31204"
+msgid "Titles with"
+msgstr ""

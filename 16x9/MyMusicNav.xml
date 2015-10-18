@@ -254,20 +254,11 @@
 						<width>1192</width>
 						<height>120</height>
 						<align>left</align>
-						<font>Light32</font>
+						<font>Reg30Spaced</font>
 						<pagecontrol>98</pagecontrol>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbcbcbc</textcolor>
-						<label>[COLOR 00ffffff][B]$INFO[ListItem.Label,,---][/B][/COLOR]$INFO[ListItem.Label2]</label>
-					</control>
-					<control type="textbox">
-						<top>97</top>
-						<width>1192</width>
-						<height>120</height>
-						<align>left</align>
-						<font>Bold32</font>
-						<textcolor>ffbcbcbc</textcolor>
-						<label>$INFO[ListItem.Label]</label>
+						<label>[B]$INFO[ListItem.Label][/B] [LIGHT]$INFO[ListItem.Label2][/LIGHT]</label>
 					</control>
 					<control id="98" type="scrollbar">
 						<top>105</top>

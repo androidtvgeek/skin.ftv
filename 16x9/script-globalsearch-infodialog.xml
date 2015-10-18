@@ -340,120 +340,70 @@
 				<control type="group">
 					<height>36</height>
 					<visible>!IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[21894]:</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[21894]:-[/B][/COLOR]$INFO[Container(100).ListItem.Property(Artist_Formed)]</label>
+						<label>[B]$LOCALIZE[21894]:[/B] [LIGHT]$INFO[Container(100).ListItem.Property(Artist_Formed)][/LIGHT]</label>
 					</control>
 				</control>
 				<!-- Year -->
 				<control type="group">
 					<height>36</height>
 					<visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[345]:</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[345]:-[/B][/COLOR]$INFO[Container(100).ListItem.Property(Year)]</label>
+						<label>[B]$LOCALIZE[345]:[/B] [LIGHT]$INFO[Container(100).ListItem.Property(Year)][/LIGHT]</label>
 					</control>
 				</control>
 				<!-- Genre -->
 				<control type="group">
 					<height>36</height>
 					<visible>!IsEmpty(Container(100).ListItem.Property(Genre)) + !IsEmpty(Container(100).ListItem.Property(Artist_Genre))</visible>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[515]:</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[515]:-[/B][/COLOR]$INFO[Container(100).ListItem.Property(Genre)]$INFO[Container(100).ListItem.Property(Artist_Genre)]</label>
+						<label>[B]$LOCALIZE[515]:[/B] [LIGHT]$INFO[Container(100).ListItem.Property(Genre)]$INFO[Container(100).ListItem.Property(Artist_Genre)][/LIGHT]</label>
 					</control>
 				</control>
 				<!-- Active -->
 				<control type="group">
 					<height>36</height>
 					<visible>!IsEmpty(Container(100).ListItem.Property(Artist_YearsActive))</visible>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[19074]</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[19074]:-[/B][/COLOR]$INFO[Container(100).ListItem.Property(Artist_YearsActive)]</label>
+						<label>[B]$LOCALIZE[19074]:[/B] [LIGHT]$INFO[Container(100).ListItem.Property(Artist_YearsActive)][/LIGHT]</label>
 					</control>
 				</control>
 				<!-- Artist -->
 				<control type="group">
 					<height>36</height>
 					<visible>!IsEmpty(Container(100).ListItem.Property(Artist))</visible>
-					<control type="label">
-						<top>3</top>
-						<width>1192</width>
-						<height>30</height>
-						<align>left</align>
-						<font>Bold30</font>
-						<scroll>false</scroll>
-						<textcolor>ff717171</textcolor>
-						<label>$LOCALIZE[557]:</label>
-					</control>
 					<control type="textbox">
 						<width>1192</width>
 						<height>36</height>
 						<align>left</align>
-						<font>Light30Spaced</font>
+						<font>Reg30Spaced</font>
 						<autoscroll>false</autoscroll>
 						<textcolor>ffbbbbbb</textcolor>
-						<label>[COLOR 00ffffff][B]$LOCALIZE[557]:-[/B][/COLOR]$INFO[Container(100).ListItem.Property(Artist)]</label>
+						<label>[B]$LOCALIZE[557]:[/B] [LIGHT]$INFO[Container(100).ListItem.Property(Artist)][/LIGHT]</label>
 					</control>
 				</control>
 				<control type="label">
