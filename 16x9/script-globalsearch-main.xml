@@ -819,7 +819,7 @@
 						<control id="151" type="fixedlist">
 							<left>-374</left>
 							<top>242</top>
-							<width>2328</width>
+							<width>2344</width>
 							<height>576</height>
 							<onup>SetProperty(Movement,1)</onup>
 							<onup condition="!Window.IsVisible(1104)">SetProperty(Fade,1,Home)</onup>

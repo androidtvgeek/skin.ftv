@@ -136,7 +136,7 @@
 				<left>196</left>
 				<top>206</top>
 				<height>38</height>
-				<itemgap>15</itemgap>
+				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<include>VisibleDelayFadeAnimation</include>
@@ -149,11 +149,10 @@
 					<visible>!IsEmpty(Window(home).Property(TVShowRating))</visible>
 				</control>
 				<control type="label">
-					<left>-8</left>
 					<top>-8</top>
 					<width>auto</width>
 					<height>38</height>
-					<font>Med32</font>
+					<font>Med32Num</font>
 					<aligny>bottom</aligny>
 					<textcolor>ff707070</textcolor>
 					<label>$INFO[Window(home).Property(TVShowVotes),(,)]</label>
@@ -167,11 +166,10 @@
 					<visible>!IsEmpty(Window(home).Property(TVShowRating))</visible>
 				</control>
 				<control type="label">
-					<left>-8</left>
 					<top>-13</top>
 					<width>auto</width>
 					<height>34</height>
-					<font>Bold30</font>
+					<font>Bold30Num</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[Window(home).Property(TVShowRating),,/10]</label>
@@ -183,7 +181,7 @@
 				<left>196</left>
 				<top>206</top>
 				<height>38</height>
-				<itemgap>15</itemgap>
+				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
 				<include>VisibleDelayFadeAnimation</include>
@@ -196,11 +194,10 @@
 					<visible>!IsEmpty(ListItem.Rating)</visible>
 				</control>
 				<control type="label">
-					<left>-8</left>
 					<top>-8</top>
 					<width>auto</width>
 					<height>38</height>
-					<font>Med32</font>
+					<font>Med32Num</font>
 					<aligny>bottom</aligny>
 					<textcolor>ff707070</textcolor>
 					<label>$INFO[ListItem.Votes,(,)]</label>
@@ -214,11 +211,10 @@
 					<visible>!IsEmpty(ListItem.Rating)</visible>
 				</control>
 				<control type="label">
-					<left>-8</left>
 					<top>-13</top>
 					<width>auto</width>
 					<height>34</height>
-					<font>Bold30</font>
+					<font>Bold30Num</font>
 					<aligny>bottom</aligny>
 					<textcolor>ffdadada</textcolor>
 					<label>$INFO[ListItem.Rating,,/10]</label>
@@ -380,17 +376,17 @@
 				<control type="grouplist">
 					<top>110</top>
 					<height>26</height>
-					<itemgap>20</itemgap>
+					<itemgap>10</itemgap>
 					<orientation>horizontal</orientation>
 					<usecontrolcoords>true</usecontrolcoords>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 					<control type="label">
 						<width>auto</width>
 						<height>24</height>
-						<font>Med24</font>
+						<font>Med24Num</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffbebebe</textcolor>
-						<label>$INFO[ListItem.Year]</label>
+						<label>$INFO[ListItem.Year,,[COLOR 00ffffff]/[/COLOR]]</label>
 						<visible>!IsEmpty(ListItem.Year)</visible>
 					</control>
 					<include>Rating_TV</include>
@@ -399,10 +395,11 @@
 					<include condition="Stringcompare(Skin.String(RatingCountry),Germany)">Rating_FSK</include>
 					<control type="image">
 						<top>3</top>
-						<width>35</width>
+						<width>55</width>
 						<height>23</height>
 						<colordiffuse>ffdadada</colordiffuse>
-						<texture>rating/cc.png</texture>
+						<aspectratio>keep</aspectratio>
+						<texture align="center">rating/cc.png</texture>
 						<visible>!IsEmpty(ListItem.SubtitleLanguage)</visible>
 					</control>
 					<control type="image">
@@ -413,13 +410,12 @@
 						<visible>!IsEmpty(ListItem.Rating)</visible>
 					</control>
 					<control type="label">
-						<left>-13</left>
 						<width>auto</width>
 						<height>24</height>
-						<font>Med24</font>
+						<font>Med24Num</font>
 						<aligny>bottom</aligny>
 						<textcolor>ff707070</textcolor>
-						<label>$INFO[ListItem.Votes,(,)]</label>
+						<label>$INFO[ListItem.Votes,(,)[COLOR 00ffffff]/[/COLOR]]</label>
 						<visible>!IsEmpty(ListItem.Votes) + IntegerGreaterThan(ListItem.Votes,0)</visible>
 					</control>
 					<control type="image">
@@ -437,11 +433,10 @@
 						<visible>!IsEmpty(ListItem.Rating) + Container.Content(tvshows)</visible>
 					</control>
 					<control type="label">
-						<left>-13</left>
 						<top>-8</top>
 						<width>auto</width>
 						<height>24</height>
-						<font>Bold24</font>
+						<font>Bold24Num</font>
 						<aligny>bottom</aligny>
 						<textcolor>ffdadada</textcolor>
 						<label>$INFO[ListItem.Rating,,/10]</label>

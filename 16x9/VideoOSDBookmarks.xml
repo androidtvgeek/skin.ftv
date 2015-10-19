@@ -8,7 +8,7 @@
 		<control type="fixedlist" id="11">
 			<left>-374</left>
 			<top>242</top>
-			<width>2328</width>
+			<width>2344</width>
 			<height>576</height>
 			<onup>Back</onup>
 			<ondown>1001</ondown>

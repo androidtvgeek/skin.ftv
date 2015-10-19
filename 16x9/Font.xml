@@ -173,6 +173,11 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>Med32Num</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
 			<name>Med30</name>
 			<filename>HelveticaNeue_Med.ttf</filename>
 			<size>30</size>
@@ -189,6 +194,12 @@
 		</font>
 		<font>
 			<name>Med24</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>24</size>
+			<linespacing>1.1</linespacing>
+		</font>
+		<font>
+			<name>Med24Num</name>
 			<filename>HelveticaNeue_Med.ttf</filename>
 			<size>24</size>
 			<linespacing>1.1</linespacing>
@@ -270,6 +281,11 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>Bold30Num</name>
+			<filename>HelveticaNeue_Bold.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
 			<name>Bold29</name>
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>29</size>
@@ -286,6 +302,11 @@
 		</font>
 		<font>
 			<name>Bold24</name>
+			<filename>HelveticaNeue_Bold.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>Bold24Num</name>
 			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>24</size>
 		</font>
@@ -469,6 +490,11 @@
 			<size>32</size>
 		</font>
 		<font>
+			<name>Med32Num</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
 			<name>Med30</name>
 			<filename>Roboto-Medium.ttf</filename>
 			<size>30</size>
@@ -486,6 +512,12 @@
 		<font>
 			<name>Med24</name>
 			<filename>Roboto-Medium.ttf</filename>
+			<size>24</size>
+			<linespacing>1.1</linespacing>
+		</font>
+		<font>
+			<name>Med24Num</name>
+			<filename>HelveticaNeue_Med.ttf</filename>
 			<size>24</size>
 			<linespacing>1.1</linespacing>
 		</font>
@@ -566,6 +598,11 @@
 			<size>30</size>
 		</font>
 		<font>
+			<name>Bold30Num</name>
+			<filename>HelveticaNeue_Bold.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
 			<name>Bold29</name>
 			<filename>Roboto-Bold.ttf</filename>
 			<size>29</size>
@@ -583,6 +620,11 @@
 		<font>
 			<name>Bold24</name>
 			<filename>Roboto-Bold.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>Bold24Num</name>
+			<filename>HelveticaNeue_Bold.ttf</filename>
 			<size>24</size>
 		</font>
 		<!-- Required for system -->

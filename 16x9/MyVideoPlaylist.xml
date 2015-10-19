@@ -111,7 +111,6 @@
 					<texturefocus>-</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<onfocus>ClearProperty(TVShowID,home)</onfocus>
-					<onfocus>ClearProperty(TVShowRating,home)</onfocus>
 					<onfocus>ClearProperty(PercentRemaining,home)</onfocus>
 					<onfocus condition="ListItem.IsResumable">SetProperty(PercentRemaining,$VAR[PercentRemaining],home)</onfocus>
 				</control>

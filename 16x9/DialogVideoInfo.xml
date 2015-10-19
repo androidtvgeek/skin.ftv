@@ -238,14 +238,14 @@
 					<width>48</width>
 					<height>23</height>
 					<texture>views/imdb.png</texture>
-					<visible>!IsEmpty(ListItem.Rating) + !Container.Content(tvshows)</visible>
+					<visible>!IsEmpty(ListItem.Rating) + Container.Content(movies)</visible>
 				</control>
 				<control type="image">
 					<top>3</top>
 					<width>47</width>
 					<height>23</height>
 					<texture>views/tvdb.png</texture>
-					<visible>!IsEmpty(ListItem.Rating) + Container.Content(tvshows)</visible>
+					<visible>!IsEmpty(ListItem.Rating) + !Container.Content(movies)</visible>
 				</control>
 				<control type="label">
 					<top>-13</top>
