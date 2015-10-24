@@ -6,6 +6,15 @@
 	<onunload>SetFocus(55)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
+		<!-- Hidden scrollbar -->
+		<control id="96" type="scrollbar">
+			<left>-1200</left>
+			<top>295</top>
+			<width>792</width>
+			<height>528</height>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
 		<!-- Background -->
 		<include>BackgroundImage</include>
 		<!-- Fanart -->
@@ -176,7 +185,7 @@
 						<label>-</label>
 						<onfocus>Right</onfocus>
 						<include>NoTextures</include>
-						<visible>!Control.HasFocus(12) + !Control.HasFocus(9) + !Control.HasFocus(6) + !Control.HasFocus(7) + !Control.HasFocus(8) + !Control.HasFocus(11) + !Control.HasFocus(10)</visible>
+						<visible>!Control.HasFocus(12) + !Control.HasFocus(9) + !Control.HasFocus(6) + !Control.HasFocus(7) + !Control.HasFocus(8) + !Control.HasFocus(10)</visible>
 					</control>
 					<!-- Update Addon Button -->
 					<control id="8" type="button">
@@ -256,22 +265,6 @@
 						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Control.IsEnabled(6)</visible>
 					</control>
-					<!-- Rollback Button -->
-					<control id="11" type="button">
-						<include condition="SubString(System.Language,English)">Width164</include>
-						<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
-						<height>116</height>
-						<onup>Close</onup>
-						<ondown condition="Control.IsVisible(50)">50</ondown>
-						<font>Med24</font>
-						<label>$LOCALIZE[31037]</label>
-						<textoffsetx>20</textoffsetx>
-						<textcolor>ffdadada</textcolor>
-						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
-						<visible>Control.IsEnabled(11)</visible>
-					</control>
 					<!-- Changelog Button -->
 					<control id="10" type="button">
 						<include condition="SubString(System.Language,English)">Width174</include>
@@ -323,14 +316,28 @@
 					<visible>!IsEmpty(ListItem.Property(Addon.Description))</visible>
 				</control>
 				<control type="textbox">
-					<top>293</top>
+					<top>291</top>
 					<width>792</width>
-					<height>538</height>
+					<height>528</height>
 					<align>left</align>
 					<font>Light30</font>
+					<pagecontrol>96</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffa4a4a4</textcolor>
 					<label>$INFO[ListItem.Property(Addon.Description)]</label>
+				</control>
+				<!-- More button -->
+				<control id="3002" type="button">
+					<left>794</left>
+					<top>788</top>
+					<width>37</width>
+					<height>23</height>
+					<onleft>7001</onleft>
+					<onright>50</onright>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[ListItem.Property(Addon.Description)]"')</onclick>
+					<texturefocus>views/more_fo.png</texturefocus>
+					<texturenofocus>views/more_nf.png</texturenofocus>
+					<visible>Control.IsVisible(96)</visible>
 				</control>
 				<!-- Details -->
 				<control type="grouplist">

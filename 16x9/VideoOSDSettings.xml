@@ -58,12 +58,12 @@
 				<texturefocus>-</texturefocus>
 				<texturenofocus>-</texturenofocus>
 				<radioposx>708</radioposx>
-				<radiowidth>100</radiowidth>
-				<radioheight>58</radioheight>
-				<textureradioonfocus>dialogs/RadioOnFO.png</textureradioonfocus>
-				<textureradioonnofocus>dialogs/RadioOnNF.png</textureradioonnofocus>
-				<textureradioofffocus>dialogs/RadioOffFO.png</textureradioofffocus>
-				<textureradiooffnofocus>dialogs/RadioOffNF.png</textureradiooffnofocus>
+				<radiowidth />
+				<radioheight />
+				<textureradioonfocus>-</textureradioonfocus>
+				<textureradioonnofocus>-</textureradioonnofocus>
+				<textureradioofffocus>-</textureradioofffocus>
+				<textureradiooffnofocus>-</textureradiooffnofocus>
 			</control>
 			<!-- Default spincontrolex -->
 			<control type="spincontrolex" id="9">

@@ -67,8 +67,10 @@
 				<radioposx>773</radioposx>
 				<textureradioonfocus>settings/radio_on_focus.png</textureradioonfocus>
 				<textureradioonnofocus>settings/radio_on_no_focus.png</textureradioonnofocus>
+				<textureradioondisabled>settings/radio_on_disabled.png</textureradioondisabled>
 				<textureradioofffocus>settings/radio_off_focus.png</textureradioofffocus>
 				<textureradiooffnofocus>settings/radio_off_no_focus.png</textureradiooffnofocus>
+				<textureradiooffdisabled>settings/radio_off_disabled.png</textureradiooffdisabled>
 				<texturefocus border="3">settings/button_focus.png</texturefocus>
 				<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 			</control>

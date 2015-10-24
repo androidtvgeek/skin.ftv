@@ -18,7 +18,7 @@
 		<control type="textbox">
 			<left>-1200</left>
 			<width>1192</width>
-			<height>122</height>
+			<height>124</height>
 			<align>left</align>
 			<font>Light30Spaced</font>
 			<pagecontrol>96</pagecontrol>
@@ -30,7 +30,7 @@
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
 			<width>1192</width>
-			<height>122</height>
+			<height>124</height>
 			<showonepage>false</showonepage>
 			<orientation>vertical</orientation>
 		</control>
@@ -270,7 +270,7 @@
 				<!-- Plot -->
 				<control type="textbox">
 					<width>1192</width>
-					<height max="122">auto</height>
+					<height max="124">auto</height>
 					<align>left</align>
 					<font>Light30Spaced</font>
 					<autoscroll>false</autoscroll>
@@ -525,6 +525,24 @@
 					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
 					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
 					<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
+				</control>
+				<!-- Get Thumb Button -->
+				<control id="7" type="button">
+					<width min="104" max="174">auto</width>
+					<height>116</height>
+					<onup condition="!Control.IsVisible(96)">Close</onup>
+					<onup condition="Control.IsVisible(96)">3002</onup>
+					<ondown condition="Control.IsVisible(5000)">5000</ondown>
+					<ondown condition="Control.IsVisible(50)">50</ondown>
+					<font>Med24</font>
+					<label>38023</label>
+					<wrapmultiline>true</wrapmultiline>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>ffdadada</textcolor>
+					<focusedcolor>ff222222</focusedcolor>
+					<visible>Control.IsEnabled(7)</visible>
+					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 			</control>
 		</control>

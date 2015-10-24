@@ -39,7 +39,7 @@
 				<width>36</width>
 				<height>20</height>
 				<texture>views/arrow_up.png</texture>
-				<visible>Control.IsVisible(3000) + IntegerGreaterThan(Container(10).CurrentPage,1)</visible>
+				<visible>Container(10).HasPrevious</visible>
 				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
 				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 			</control>
@@ -63,7 +63,7 @@
 				<width>36</width>
 				<height>20</height>
 				<texture>views/arrow_down.png</texture>
-				<visible>Control.IsVisible(3000) + !StringCompare(Container(10).CurrentPage,Container(10).NumPages)</visible>
+				<visible>Container(10).HasNext</visible>
 				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
 				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
 			</control>

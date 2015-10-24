@@ -62,12 +62,12 @@
 		<disabledcolor>DisabledColor</disabledcolor>
 		<radiowidth>100</radiowidth>
 		<radioheight>58</radioheight>
-		<texturenofocus>-</texturenofocus>
-		<texturefocus>-</texturefocus>
-		<textureradioonfocus>dialogs/RadioOnFO.png</textureradioonfocus>
-		<textureradioonnofocus>dialogs/RadioOnNF.png</textureradioonnofocus>
-		<textureradioofffocus>dialogs/RadioOffFO.png</textureradioofffocus>
-		<textureradiooffnofocus>dialogs/RadioOffNF.png</textureradiooffnofocus>
+		<radiowidth />
+		<radioheight />
+		<textureradioonfocus>-</textureradioonfocus>
+		<textureradioonnofocus>-</textureradioonnofocus>
+		<textureradioofffocus>-</textureradioofffocus>
+		<textureradiooffnofocus>-</textureradiooffnofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
 	<default type="spincontrolex">
@@ -89,6 +89,8 @@
 		<texturedown>dialogs/SpinDownNF.png</texturedown>
 		<textureupfocus>dialogs/SpinUpFO.png</textureupfocus>
 		<texturedownfocus>dialogs/SpinDownFO.png</texturedownfocus>
+		<textureupdisabled>dialogs/SpinUpDisabled.png</textureupdisabled>
+		<texturedowndisabled>dialogs/SpinDownDisabled.png</texturedowndisabled>
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>
@@ -108,6 +110,8 @@
 		<texturedown>dialogs/SpinDownNF.png</texturedown>
 		<textureupfocus>dialogs/SpinUpFO.png</textureupfocus>
 		<texturedownfocus>dialogs/SpinDownFO.png</texturedownfocus>
+		<textureupdisabled>dialogs/SpinUpDisabled.png</textureupdisabled>
+		<texturedowndisabled>dialogs/SpinDownDisabled.png</texturedowndisabled>
 		<reverse>yes</reverse>
 		<pulseonselect>false</pulseonselect>
 	</default>

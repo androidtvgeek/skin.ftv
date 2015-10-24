@@ -80,8 +80,8 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(3).NumItems,0) | StringCompare(Container(3).NumItems,1) | [StringCompare(Container(3).NumItems,2) + [!StringCompare(Container(3).ListItem.Label,..) + !StringCompare(Container(3).ListItem(1).Label,..) + !StringCompare(Container(3).ListItem(2).Label,..)]]" effect="slide" end="0,-168">Conditional</animation>
-				<animation condition="[StringCompare(Container(3).NumItems,2) + [StringCompare(Container(3).ListItem.Label,..) | StringCompare(Container(3).ListItem(1).Label,..) | StringCompare(Container(3).ListItem(2).Label,..)]] | StringCompare(Container(3).NumItems,3) | [StringCompare(Container(3).NumItems,4) + [!StringCompare(Container(3).ListItem.Label,..) + !StringCompare(Container(3).ListItem(1).Label,..) + !StringCompare(Container(3).ListItem(2).Label,..) + !StringCompare(Container(3).ListItem(3).Label,..) + !StringCompare(Container(3).ListItem(4).Label,..)]]" effect="slide" end="0,-84">Conditional</animation>
+				<animation condition="StringCompare(Container(3).NumItems,0) | StringCompare(Container(3).NumItems,1) | [StringCompare(Container(3).NumItems,2) + !Container(3).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+				<animation condition="[StringCompare(Container(3).NumItems,2) + Container(3).HasParent] | StringCompare(Container(3).NumItems,3) | [StringCompare(Container(3).NumItems,4) + !Container(3).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 				<itemlayout height="84" width="958">
 					<control type="image">
 						<width>958</width>
@@ -206,7 +206,7 @@
 				<scrolltime>0</scrolltime>
 				<focusposition>1</focusposition>
 				<orientation>vertical</orientation>
-				<animation condition="StringCompare(Container(6).NumItems,0) | StringCompare(Container(6).NumItems,1) | [StringCompare(Container(6).NumItems,2) + [!StringCompare(Container(6).ListItem.Label,..) + !StringCompare(Container(6).ListItem(1).Label,..) + !StringCompare(Container(6).ListItem(2).Label,..)]]" effect="slide" end="0,-140">Conditional</animation>
+				<animation condition="StringCompare(Container(6).NumItems,0) | StringCompare(Container(6).NumItems,1) | [StringCompare(Container(6).NumItems,2) + !Container(6).HasParent]" effect="slide" end="0,-140">Conditional</animation>
 				<itemlayout height="140" width="858">
 					<control type="image">
 						<width>858</width>

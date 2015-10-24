@@ -28,6 +28,18 @@
 		<control id="1150" type="list" />
 		<control id="1250" type="list" />
 		<control id="1350" type="list" />
+		<!-- Hidden Plot -->
+		<control type="textbox">
+			<left>-1200</left>
+			<width>1192</width>
+			<height>124</height>
+			<align>left</align>
+			<font>Light30Spaced</font>
+			<pagecontrol>96</pagecontrol>
+			<autoscroll>false</autoscroll>
+			<textcolor>ffbbbbbb</textcolor>
+			<label>$INFO[Window.Property(Movie.Plot)]</label>
+		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
@@ -215,12 +227,11 @@
 				<!-- Plot -->
 				<control type="textbox">
 					<width>1192</width>
-					<height max="122">auto</height>
+					<height max="124">auto</height>
 					<align>left</align>
 					<font>Light30Spaced</font>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffbbbbbb</textcolor>
-					<pagecontrol>96</pagecontrol>
 					<label>$INFO[Window.Property(Movie.Plot)]</label>
 					<include>DialogVideoInfoAnimation</include>
 					<visible>!IsEmpty(Window.Property(Movie.Plot))</visible>
@@ -232,12 +243,12 @@
 				<!-- More button -->
 				<control id="3002" type="button">
 					<left>1194</left>
-					<top>-34</top>
+					<top>-40</top>
 					<width>37</width>
 					<height>23</height>
 					<onleft>7000</onleft>
 					<onright>8</onright>
-					<onclick>SetFocus(4000)</onclick>
+					<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[Window.Property(movie.Plot)]"')</onclick>
 					<include>DialogVideoInfoAnimation</include>
 					<texturefocus>views/more_fo.png</texturefocus>
 					<texturenofocus>views/more_nf.png</texturenofocus>
@@ -1104,85 +1115,6 @@
 					<label>$INFO[Container(1000).ListItem.Property(character),$LOCALIZE[20347] ,]</label>
 					<visible>Control.HasFocus(1000)</visible>
 				</control>
-			</control>
-		</control>
-		<!-- Background -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture>dialogs/DialogBackground.png</texture>
-			<visible>Control.HasFocus(4000)</visible>
-			<animation effect="fade" end="100" start="0" time="200">Visible</animation>
-			<animation delay="100" effect="fade" end="0" start="100" time="200">Hidden</animation>
-		</control>
-		<control type="group">
-			<visible>Control.HasFocus(4000)</visible>
-			<animation reversible="true" type="Visible">
-				<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
-				<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
-			</animation>
-			<animation reversible="true" type="Hidden">
-				<effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
-				<effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
-			</animation>
-			<!-- Plot background -->
-			<control type="image">
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>973</width>
-				<height>760</height>
-				<texture border="4,7,4,7">views/text_viewer_background.png</texture>
-			</control>
-			<!-- Arrow up -->
-			<control type="image">
-				<left>942</left>
-				<top>216</top>
-				<width>36</width>
-				<height>20</height>
-				<texture>views/arrow_up.png</texture>
-				<visible>Control.IsVisible(4000) + IntegerGreaterThan(Container(4001).CurrentPage,1)</visible>
-				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
-				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
-			</control>
-			<!-- Plot -->
-			<control id="4001" type="textbox">
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>788</width>
-				<height>454</height>
-				<align>left</align>
-				<font>Light36</font>
-				<pagecontrol>4000</pagecontrol>
-				<autoscroll>false</autoscroll>
-				<textcolor>ffdadada</textcolor>
-				<label>$INFO[Window.Property(movie.Plot)]</label>
-			</control>
-			<!-- Arrow down -->
-			<control type="image">
-				<left>942</left>
-				<top>844</top>
-				<width>36</width>
-				<height>20</height>
-				<texture>views/arrow_down.png</texture>
-				<visible>Control.IsVisible(4000) + !StringCompare(Container(4001).CurrentPage,Container(4001).NumPages)</visible>
-				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
-				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
-			</control>
-			<!-- Scrollbar -->
-			<control id="4000" type="scrollbar">
-				<left>1394</left>
-				<centertop>50%</centertop>
-				<width>8</width>
-				<height>446</height>
-				<onup>noop</onup>
-				<ondown>noop</ondown>
-				<onleft>3002</onleft>
-				<onright>3002</onright>
-				<onback>3002</onback>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">Control.HasFocus(4000)</visible>
-				<texturesliderbarfocus border="3">common/Scrollbar.png</texturesliderbarfocus>
-				<animation condition="System.IdleTime(1)" effect="fade" end="0" start="100" time="200">Conditional</animation>
 			</control>
 		</control>
 	</controls>

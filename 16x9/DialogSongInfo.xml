@@ -173,6 +173,7 @@
 					<textoffsetx>23</textoffsetx>
 					<textoffsety>27</textoffsety>
 					<label>186</label>
+					<onclick>Close</onclick>
 				</control>
 			</control>
 		</control>

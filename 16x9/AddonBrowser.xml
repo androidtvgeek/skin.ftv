@@ -425,7 +425,7 @@
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture>dialogs/DialogBackground.png</texture>
-			<visible>Control.HasFocus(51) | Control.HasFocus(3002) | Control.HasFocus(4000) | ControlGroup(9000).HasFocus</visible>
+			<visible>Control.HasFocus(51) | Control.HasFocus(3002) | ControlGroup(9000).HasFocus</visible>
 			<animation delay="125" effect="fade" end="100" start="0" time="200">Visible</animation>
 			<animation delay="100" effect="fade" end="0" start="100" time="200">Hidden</animation>
 		</control>
@@ -434,7 +434,7 @@
 			<top>289</top>
 			<width>958</width>
 			<height>480</height>
-			<visible>Control.HasFocus(51) | Control.HasFocus(3002) | Control.HasFocus(4000) | ControlGroup(9000).HasFocus</visible>
+			<visible>Control.HasFocus(51) | Control.HasFocus(3002) | ControlGroup(9000).HasFocus</visible>
 			<animation reversible="false" type="Visible">
 				<effect end="100" start="0" time="200" type="fade" />
 				<effect easing="inout" end="0,0" start="500,0" time="200" tween="sine" type="slide" />
@@ -535,7 +535,7 @@
 						<height>23</height>
 						<onleft>51</onleft>
 						<onright>9000</onright>
-						<onclick>SetFocus(4000)</onclick>
+						<onclick>RunScript(script.toolbox,info=textviewer,header=,text='"$INFO[ListItem.Property(Addon.Description)]"')</onclick>
 						<include>DialogVideoInfoAnimation</include>
 						<texturefocus>views/more_fo.png</texturefocus>
 						<texturenofocus>views/more_nf.png</texturenofocus>
@@ -840,7 +840,7 @@
 				<orientation>vertical</orientation>
 				<viewtype label="535">list</viewtype>
 				<visible>!IsEmpty(Container.FolderPath)</visible>
-				<animation condition="StringCompare(Container(51).NumItems,0) | StringCompare(Container(51).NumItems,1) | [StringCompare(Container(51).NumItems,2) + [!StringCompare(Container(51).ListItem.Label,..) + !StringCompare(Container(51).ListItem(1).Label,..) + !StringCompare(Container(51).ListItem(2).Label,..)]]" effect="slide" end="0,-140">Conditional</animation>
+				<animation condition="StringCompare(Container(51).NumItems,0) | StringCompare(Container(51).NumItems,1) | [StringCompare(Container(51).NumItems,2) + !Container(51).HasParent]" effect="slide" end="0,-140">Conditional</animation>
 				<itemlayout height="140" width="558">
 					<control type="image">
 						<width>558</width>
@@ -900,85 +900,6 @@
 						<visible>!Control.HasFocus(51)</visible>
 					</control>
 				</focusedlayout>
-			</control>
-		</control>
-		<!-- Background -->
-		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture>dialogs/DialogBackground.png</texture>
-			<visible>Control.HasFocus(4000)</visible>
-			<animation effect="fade" end="100" start="0" time="200">Visible</animation>
-			<animation delay="100" effect="fade" end="0" start="100" time="200">Hidden</animation>
-		</control>
-		<control type="group">
-			<visible>Control.HasFocus(4000)</visible>
-			<animation reversible="true" type="Visible">
-				<effect center="auto" easing="inout" end="100" start="92" time="120" tween="sine" type="zoom" />
-				<effect easing="inout" end="100" start="0" time="120" tween="sine" type="fade" />
-			</animation>
-			<animation reversible="true" type="Hidden">
-				<effect center="auto" easing="inout" end="92" start="100" time="120" tween="sine" type="zoom" />
-				<effect easing="inout" end="0" start="100" time="120" tween="sine" type="fade" />
-			</animation>
-			<!-- Plot background -->
-			<control type="image">
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>973</width>
-				<height>760</height>
-				<texture border="4,7,4,7">views/text_viewer_background.png</texture>
-			</control>
-			<!-- Arrow up -->
-			<control type="image">
-				<left>942</left>
-				<top>216</top>
-				<width>36</width>
-				<height>20</height>
-				<texture>views/arrow_up.png</texture>
-				<visible>Control.IsVisible(4000) + IntegerGreaterThan(Container(4001).CurrentPage,1)</visible>
-				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
-				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
-			</control>
-			<!-- Plot -->
-			<control id="4001" type="textbox">
-				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
-				<width>788</width>
-				<height>454</height>
-				<align>left</align>
-				<font>Light36</font>
-				<pagecontrol>4000</pagecontrol>
-				<autoscroll>false</autoscroll>
-				<textcolor>ffdadada</textcolor>
-				<label>$INFO[ListItem.Property(Addon.Description)]</label>
-			</control>
-			<!-- Arrow down -->
-			<control type="image">
-				<left>942</left>
-				<top>844</top>
-				<width>36</width>
-				<height>20</height>
-				<texture>views/arrow_down.png</texture>
-				<visible>Control.IsVisible(4000) + !StringCompare(Container(4001).CurrentPage,Container(4001).NumPages)</visible>
-				<animation delay="80" effect="fade" end="100" start="0" time="120">Visible</animation>
-				<animation delay="80" effect="fade" end="0" start="100" time="120">Hidden</animation>
-			</control>
-			<!-- Scrollbar -->
-			<control id="4000" type="scrollbar">
-				<left>1394</left>
-				<centertop>50%</centertop>
-				<width>8</width>
-				<height>446</height>
-				<onup>noop</onup>
-				<ondown>noop</ondown>
-				<onleft>51</onleft>
-				<onright>51</onright>
-				<onback>51</onback>
-				<showonepage>false</showonepage>
-				<orientation>vertical</orientation>
-				<visible allowhiddenfocus="true">Control.HasFocus(4000)</visible>
-				<texturesliderbarfocus border="3">common/Scrollbar.png</texturesliderbarfocus>
-				<animation condition="System.IdleTime(1)" effect="fade" end="0" start="100" time="200">Conditional</animation>
 			</control>
 		</control>
 	</controls>

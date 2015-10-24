@@ -353,12 +353,12 @@
 					<texturenofocus border="3">settings/button_no_focus.png</texturenofocus>
 					<radioposx>447</radioposx>
 					<radioposy>13</radioposy>
-					<radiowidth>100</radiowidth>
-					<radioheight>58</radioheight>
-					<textureradioonfocus>dialogs/RadioOnFO.png</textureradioonfocus>
-					<textureradioonnofocus>dialogs/RadioOnNFDark.png</textureradioonnofocus>
-					<textureradioofffocus>dialogs/RadioOffFO.png</textureradioofffocus>
-					<textureradiooffnofocus>dialogs/RadioOffNFDark.png</textureradiooffnofocus>
+					<radiowidth />
+					<radioheight />
+					<textureradioonfocus>-</textureradioonfocus>
+					<textureradioonnofocus>-</textureradioonnofocus>
+					<textureradioofffocus>-</textureradioofffocus>
+					<textureradiooffnofocus>-</textureradiooffnofocus>
 					<label>20096</label>
 				</control>
 				<!-- Auto login -->
@@ -391,8 +391,8 @@
 				<focusposition>2</focusposition>
 				<orientation>vertical</orientation>
 				<visible>ControlGroup(100).HasFocus(102)</visible>
-				<animation condition="StringCompare(Container(2).NumItems,0) | StringCompare(Container(2).NumItems,1) | [StringCompare(Container(2).NumItems,2) + [!StringCompare(Container(2).ListItem.Label,..) + !StringCompare(Container(2).ListItem(1).Label,..) + !StringCompare(Container(2).ListItem(2).Label,..)]]" effect="slide" end="0,-168">Conditional</animation>
-				<animation condition="[StringCompare(Container(2).NumItems,2) + [StringCompare(Container(2).ListItem.Label,..) | StringCompare(Container(2).ListItem(1).Label,..) | StringCompare(Container(2).ListItem(2).Label,..)]] | StringCompare(Container(2).NumItems,3) | [StringCompare(Container(2).NumItems,4) + [!StringCompare(Container(2).ListItem.Label,..) + !StringCompare(Container(2).ListItem(1).Label,..) + !StringCompare(Container(2).ListItem(2).Label,..) + !StringCompare(Container(2).ListItem(3).Label,..) + !StringCompare(Container(2).ListItem(4).Label,..)]]" effect="slide" end="0,-84">Conditional</animation>
+				<animation condition="StringCompare(Container(2).NumItems,0) | StringCompare(Container(2).NumItems,1) | [StringCompare(Container(2).NumItems,2) + !Container(2).HasParent]" effect="slide" end="0,-168">Conditional</animation>
+				<animation condition="[StringCompare(Container(2).NumItems,2) + Container(2).HasParent] | StringCompare(Container(2).NumItems,3) | [StringCompare(Container(2).NumItems,4) + !Container(2).HasParent]" effect="slide" end="0,-84">Conditional</animation>
 				<itemlayout height="84" width="958">
 					<control type="image">
 						<width>958</width>

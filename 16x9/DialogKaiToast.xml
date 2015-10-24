@@ -31,34 +31,6 @@
 				<top>26</top>
 				<width>111</width>
 				<height>111</height>
-				<texture>dialogs/notification_info.png</texture>
-			</control>
-			<!-- Info -->
-			<control id="403" type="image">
-				<left>26</left>
-				<top>26</top>
-				<width>111</width>
-				<height>111</height>
-				<texture>dialogs/notification_info.png</texture>
-				<visible>false</visible>
-			</control>
-			<!-- Warning -->
-			<control id="404" type="image">
-				<left>26</left>
-				<top>26</top>
-				<width>111</width>
-				<height>111</height>
-				<texture>dialogs/notification_warning.png</texture>
-				<visible>false</visible>
-			</control>
-			<!-- Error -->
-			<control id="405" type="image">
-				<left>26</left>
-				<top>26</top>
-				<width>111</width>
-				<height>111</height>
-				<texture>dialogs/notification_error.png</texture>
-				<visible>false</visible>
 			</control>
 			<!-- Heading -->
 			<control id="401" type="label">
