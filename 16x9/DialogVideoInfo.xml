@@ -390,11 +390,11 @@
 			</control>
 			<!-- Button grouplist -->
 			<control id="9000" type="grouplist">
-				<left>-2</left>
+				<left>-12</left>
 				<top>409</top>
 				<width>1620</width>
 				<height>116</height>
-				<itemgap>10</itemgap>
+				<itemgap>0</itemgap>
 				<onleft>7000</onleft>
 				<onright>noop</onright>
 				<orientation>horizontal</orientation>
@@ -403,17 +403,17 @@
 				<animation condition="Control.HasFocus(50) | Control.HasFocus(5000)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
 				<!-- Dummy to always set focus to first visible button -->
 				<control id="9001" type="button">
-					<width>-10</width>
+					<width>0</width>
 					<height>0</height>
 					<label>-</label>
 					<onfocus>Right</onfocus>
 					<include>NoTextures</include>
-					<visible>!Control.HasFocus(8) + !Control.HasFocus(6) + !Control.HasFocus(10) + !Control.HasFocus(20) + !Control.HasFocus(21)</visible>
+					<visible>!Control.HasFocus(8) + !Control.HasFocus(1003) + !Control.HasFocus(6) + !Control.HasFocus(10) + !Control.HasFocus(20) + !Control.HasFocus(21) + !Control.HasFocus(7)</visible>
 				</control>
 				<!-- Play/Browse Button -->
 				<control id="8" type="togglebutton">
-					<include condition="SubString(System.Language,English)">Width174</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
@@ -421,19 +421,21 @@
 					<ondown condition="Control.IsVisible(50)">50</ondown>
 					<font>Med24</font>
 					<label>$VAR[VideoInfoButton8]</label>
-					<altlabel>$LOCALIZE[31074]</altlabel>
-					<usealttexture>Container.Content(TVShows)</usealttexture>
-					<textoffsetx>20</textoffsetx>
+					<altlabel>Browse[CR]TV Show</altlabel>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
-					<alttexturefocus border="3,5,6,8">views/button_fo.png</alttexturefocus>
-					<alttexturenofocus border="3,3,6,6">views/button_nf.png</alttexturenofocus>
+					<visible>Control.IsVisible(8)</visible>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+					<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
+					<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
+					<usealttexture>Container.Content(TVShows) | StringCompare(Container.Content,seasons)</usealttexture>
 				</control>
+				<!-- Trailer button -->
 				<control id="1003" type="button">
-					<include condition="SubString(System.Language,English)">Width134</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
@@ -443,53 +445,53 @@
 					<onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
 					<font>Med24</font>
 					<label>$LOCALIZE[31075]</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
 					<visible>!IsEmpty(ListItem.Trailer)</visible>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 				<!-- Refresh Button -->
 				<control id="6" type="button">
-					<include condition="SubString(System.Language,English)">Width134</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
 					<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					<ondown condition="Control.IsVisible(50)">50</ondown>
 					<font>Med24</font>
-					<label>184</label>
-					<textoffsetx>20</textoffsetx>
+					<label>31205</label>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
 					<visible>Control.IsEnabled(6)</visible>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 				<!-- Get Thumb Button -->
 				<control id="10" type="button">
-					<include condition="SubString(System.Language,English)">Width174</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
 					<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					<ondown condition="Control.IsVisible(50)">50</ondown>
 					<font>Med24</font>
-					<label>31165</label>
-					<textoffsetx>20</textoffsetx>
+					<label>[CAPITALIZE]$LOCALIZE[31165][/CAPITALIZE]</label>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
 					<visible>Control.IsEnabled(10)</visible>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 				<!-- Artwork Downloader Button -->
 				<control id="20" type="button">
-					<include condition="SubString(System.Language,English)">Width184</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
@@ -498,18 +500,18 @@
 					<onclick condition="Container.Content(tvshows)">RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
 					<onclick condition="Container.Content(movies)">RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
 					<font>Med24</font>
-					<label>31103</label>
-					<textoffsetx>20</textoffsetx>
+					<label>Artwork Downloader</label>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					<visible>System.HasAddon(script.artwork.downloader) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 				</control>
 				<!-- Cinema Experience Button -->
 				<control id="21" type="button">
-					<include condition="SubString(System.Language,English)">Width174</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
@@ -519,30 +521,30 @@
 					<onclick>RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
 					<font>Med24</font>
 					<label>31104</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					<visible>System.HasAddon(script.cinema.experience) + Container.Content(movies)</visible>
 				</control>
-				<!-- Get Thumb Button -->
+				<!-- User Rating Button -->
 				<control id="7" type="button">
-					<width min="104" max="174">auto</width>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
 					<ondown condition="Control.IsVisible(5000)">5000</ondown>
 					<ondown condition="Control.IsVisible(50)">50</ondown>
 					<font>Med24</font>
-					<label>38023</label>
-					<wrapmultiline>true</wrapmultiline>
-					<textoffsetx>20</textoffsetx>
+					<label>[CAPITALIZE]$LOCALIZE[38023][/CAPITALIZE]</label>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
 					<visible>Control.IsEnabled(7)</visible>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 				</control>
 			</control>
 		</control>

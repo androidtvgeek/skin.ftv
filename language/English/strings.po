@@ -49,15 +49,15 @@ msgid "Apps"
 msgstr ""
 
 msgctxt "#31102"
-msgid "Clear all[CR]Bookmarks"
+msgid "Clear all Bookmarks"
 msgstr ""
 
 msgctxt "#31103"
-msgid "Artwork[CR]Downloader"
+msgid "Artwork Downloader"
 msgstr ""
 
 msgctxt "#31104"
-msgid "Cinema[CR]Experience"
+msgid "Cinema Experience"
 msgstr ""
 
 msgctxt "#31000"
@@ -195,7 +195,7 @@ msgid "Overview"
 msgstr ""
 
 msgctxt "#31043"
-msgid "Turn Off[CR]Randomise"
+msgid "Turn Off Randomise"
 msgstr ""
 
 msgctxt "#31029"
@@ -203,19 +203,19 @@ msgid "Addon Details"
 msgstr ""
 
 msgctxt "#31045"
-msgid "Turn On[CR]Randomise"
+msgid "Turn On Randomise"
 msgstr ""
 
 msgctxt "#31046"
-msgid "Turn Off[CR]Shuffle All"
+msgid "Turn Off Shuffle All"
 msgstr ""
 
 msgctxt "#31033"
-msgid "Launch[CR]Now"
+msgid "Launch Now"
 msgstr ""
 
 msgctxt "#31037"
-msgid "Rollback[CR]Addon"
+msgid "Rollback Addon"
 msgstr ""
 
 msgctxt "#31041"
@@ -231,19 +231,19 @@ msgid "Local subtitle found!"
 msgstr ""
 
 msgctxt "#31052"
-msgid "Turn On[CR]Shuffle All"
+msgid "Turn On Shuffle All"
 msgstr ""
 
 msgctxt "#31053"
-msgid "Turn Off[CR]Repeat"
+msgid "Turn Off Repeat"
 msgstr ""
 
 msgctxt "#31054"
-msgid "Repeat[CR]This Item"
+msgid "Repeat This Item"
 msgstr ""
 
 msgctxt "#31055"
-msgid "Turn On[CR]Repeat All"
+msgid "Turn On Repeat All"
 msgstr ""
 
 msgctxt "#31056"
@@ -251,7 +251,7 @@ msgid "Move, copy and delete your files with KODI's built-in file manager."
 msgstr ""
 
 msgctxt "#31057"
-msgid "Watch[CR]Again"
+msgid "Watch Again"
 msgstr ""
 
 msgctxt "#31058"
@@ -267,7 +267,7 @@ msgid "Play Now"
 msgstr ""
 
 msgctxt "#31050"
-msgid "Show[CR]Changelog"
+msgid "Show Changelog"
 msgstr ""
 
 msgctxt "#31047"
@@ -287,11 +287,11 @@ msgid "Settings can be accessed from the Shutdown menu or by rebooting XBMC!"
 msgstr ""
 
 msgctxt "#31062"
-msgid "Choose[CR]Thumb"
+msgid "Choose Thumb"
 msgstr ""
 
 msgctxt "#31067"
-msgid "Choose[CR]Fanart"
+msgid "Choose Fanart"
 msgstr ""
 
 msgctxt "#31068"
@@ -319,11 +319,11 @@ msgid "Next episode"
 msgstr ""
 
 msgctxt "#31074"
-msgid "Browse[CR]TV Show"
+msgid "Browse TV Show"
 msgstr ""
 
 msgctxt "#31075"
-msgid "Watch[CR]Trailer"
+msgid "Play Trailer"
 msgstr ""
 
 msgctxt "#31076"
@@ -363,7 +363,7 @@ msgid "Pictures Widget"
 msgstr ""
 
 msgctxt "#31085"
-msgid "Shutdown[CR]Menu"
+msgid "Shutdown Menu"
 msgstr ""
 
 msgctxt "#31086"
@@ -371,23 +371,23 @@ msgid "Sorted by"
 msgstr ""
 
 msgctxt "#31087"
-msgid "Music[CR]Files"
+msgid "Music Files"
 msgstr ""
 
 msgctxt "#31088"
-msgid "Current[CR]Playlist"
+msgid "Current Playlist"
 msgstr ""
 
 msgctxt "#31089"
-msgid "View[CR]Options"
+msgid "View Options"
 msgstr ""
 
 msgctxt "#31090"
-msgid "Update[CR]Library"
+msgid "Update Library"
 msgstr ""
 
 msgctxt "#31091"
-msgid "Stop[CR]scanning"
+msgid "Stop scanning"
 msgstr ""
 
 msgctxt "#31092"
@@ -399,11 +399,11 @@ msgid "Filter By"
 msgstr ""
 
 msgctxt "#31094"
-msgid "Save[CR]Playlist"
+msgid "Save Playlist"
 msgstr ""
 
 msgctxt "#31095"
-msgid "Clear[CR]Playlist"
+msgid "Clear Playlist"
 msgstr ""
 
 msgctxt "#31096"
@@ -411,7 +411,7 @@ msgid "Your Songs"
 msgstr ""
 
 msgctxt "#31097"
-msgid "Music[CR]Library"
+msgid "Music Library"
 msgstr ""
 
 msgctxt "#31098"
@@ -419,7 +419,7 @@ msgid "Your Photos"
 msgstr ""
 
 msgctxt "#31099"
-msgid "Start[CR]Slideshow"
+msgid "Start Slideshow"
 msgstr ""
 
 msgctxt "#31061"
@@ -459,7 +459,7 @@ msgid "Known For"
 msgstr ""
 
 msgctxt "#31109"
-msgid "Watch[CR]Now"
+msgid "Watch Now"
 msgstr ""
 
 msgctxt "#31110"
@@ -606,15 +606,15 @@ msgid "Jump to"
 msgstr ""
 
 msgctxt "#31142"
-msgid "Create New[CR]Bookmark Here"
+msgid "Create New Bookmark Here"
 msgstr ""
 
 msgctxt "#31143"
-msgid "Set Episode[CR]Bookmark Here"
+msgid "Set Episode Bookmark Here"
 msgstr ""
 
 msgctxt "#31144"
-msgid "Clear all[CR]Bookmarks"
+msgid "Clear all Bookmarks"
 msgstr ""
 
 msgctxt "#31145"
@@ -690,7 +690,7 @@ msgid "Show"
 msgstr ""
 
 msgctxt "#31163"
-msgid "Start[CR]Party Mode"
+msgid "Start Party Mode"
 msgstr ""
 
 msgctxt "#31164"
@@ -698,11 +698,11 @@ msgid "Next Up"
 msgstr ""
 
 msgctxt "#31165"
-msgid "Choose[CR]Art"
+msgid "Choose Art"
 msgstr ""
 
 msgctxt "#31166"
-msgid "Open[CR]Visualiser"
+msgid "Open Visualiser"
 msgstr ""
 
 msgctxt "#31167"
@@ -855,4 +855,8 @@ msgstr ""
 
 msgctxt "#31204"
 msgid "Titles with"
+msgstr ""
+
+msgctxt "#31205"
+msgid "Refresh Information"
 msgstr ""
