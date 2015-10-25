@@ -349,7 +349,7 @@
 				</control>
 				<!-- Play/Browse Button -->
 				<control id="8" type="button">
-					<width min="104" max="194">auto</width>
+					<width min="104" max="204">auto</width>
 					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>

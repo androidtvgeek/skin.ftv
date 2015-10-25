@@ -131,7 +131,7 @@
 						<control type="grouplist">
 							<left>198</left>
 							<top>134</top>
-							<height>60</height>
+							<height>80</height>
 							<itemgap>10</itemgap>
 							<orientation>horizontal</orientation>
 							<usecontrolcoords>true</usecontrolcoords>

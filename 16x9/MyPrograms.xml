@@ -20,7 +20,7 @@
 			<control type="grouplist">
 				<left>198</left>
 				<top>134</top>
-				<height>60</height>
+				<height>80</height>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<usecontrolcoords>true</usecontrolcoords>
@@ -118,7 +118,7 @@
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003)</visible>
 					</control>
 					<control id="1002" type="button">
-						<width min="104" max="194">auto</width>
+						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>55</onup>
@@ -134,7 +134,7 @@
 						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1003" type="button">
-						<width min="104" max="194">auto</width>
+						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>55</onup>

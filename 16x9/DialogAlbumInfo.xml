@@ -220,7 +220,7 @@
 					</control>
 					<!-- Refresh Button -->
 					<control type="button" id="6">
-						<width min="104" max="194">auto</width>
+						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
@@ -235,7 +235,7 @@
 					</control>
 					<!-- Get Thumb Button -->
 					<control type="button" id="10">
-						<width min="104" max="194">auto</width>
+						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
@@ -250,7 +250,7 @@
 					</control>
 					<!-- Fanart Button -->
 					<control type="button" id="12">
-						<width min="104" max="194">auto</width>
+						<width min="104" max="204">auto</width>
 						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
