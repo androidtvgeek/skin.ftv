@@ -6,6 +6,18 @@
 	<onunload>SetFocus(50)</onunload>
 	<animation effect="fade" end="100" start="100" time="200">WindowClose</animation>
 	<controls>
+		<!-- Hidden Description -->
+		<control type="textbox">
+			<left>-1200</left>
+			<width>792</width>
+			<height>528</height>
+			<align>left</align>
+			<font>Light30</font>
+			<pagecontrol>96</pagecontrol>
+			<autoscroll>false</autoscroll>
+			<textcolor>ffa4a4a4</textcolor>
+			<label>$VAR[MusicInfoDescription]</label>
+		</control>
 		<!-- Hidden scrollbar -->
 		<control id="96" type="scrollbar">
 			<left>-1200</left>
@@ -187,11 +199,11 @@
 				<animation condition="!IsEmpty(Window(home).Property(AlbumDetails))" effect="fade" end="0" start="100" time="0">Conditional</animation>
 				<!-- Button grouplist -->
 				<control id="9000" type="grouplist">
-					<left>-2</left>
+					<left>-12</left>
 					<top>346</top>
 					<width>1620</width>
 					<height>116</height>
-					<itemgap>10</itemgap>
+					<itemgap>0</itemgap>
 					<onleft>7000</onleft>
 					<onright>noop</onright>
 					<orientation>horizontal</orientation>
@@ -199,7 +211,7 @@
 					<animation condition="Control.HasFocus(50)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
 					<!-- Dummy to always set focus to first visible button -->
 					<control id="9001" type="button">
-						<width>-10</width>
+						<width>0</width>
 						<height>0</height>
 						<label>-</label>
 						<onfocus>Right</onfocus>
@@ -208,47 +220,47 @@
 					</control>
 					<!-- Refresh Button -->
 					<control type="button" id="6">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
 						<font>Med24</font>
 						<label>$LOCALIZE[184]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Control.IsEnabled(6)</visible>
 					</control>
 					<!-- Get Thumb Button -->
 					<control type="button" id="10">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
 						<font>Med24</font>
 						<label>$LOCALIZE[31062]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Control.IsEnabled(10)</visible>
 					</control>
 					<!-- Fanart Button -->
 					<control type="button" id="12">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>116</height>
 						<onup>Close</onup>
 						<font>Med24</font>
 						<label>$LOCALIZE[31067]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Control.IsEnabled(12)</visible>
 					</control>
 				</control>
@@ -291,10 +303,8 @@
 					<height>528</height>
 					<align>left</align>
 					<font>Light30</font>
-					<pagecontrol>96</pagecontrol>
 					<autoscroll>false</autoscroll>
 					<textcolor>ffa4a4a4</textcolor>
-					<pagecontrol>96</pagecontrol>
 					<label>$VAR[MusicInfoDescription]</label>
 				</control>
 				<!-- More button -->

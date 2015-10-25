@@ -300,8 +300,9 @@
 				<include>VisibleDelayFadeAnimation</include>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
+					<left>-10</left>
 					<height>100</height>
-					<itemgap>10</itemgap>
+					<itemgap>0</itemgap>
 					<onleft>SetFocus(50)</onleft>
 					<onright>SetFocus(50)</onright>
 					<orientation>horizontal</orientation>
@@ -309,7 +310,7 @@
 					<defaultcontrol always="true">1001</defaultcontrol>
 					<!-- Dummy to always set focus to first visible button -->
 					<control id="1001" type="button">
-						<width>-10</width>
+						<width>0</width>
 						<height>0</height>
 						<label>-</label>
 						<onfocus>Right</onfocus>
@@ -317,67 +318,67 @@
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(21) + !Control.HasFocus(22) + !Control.HasFocus(1004)</visible>
 					</control>
 					<control id="1002" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<width>182</width>
 						<height>100</height>
 						<onup>50</onup>
 						<onclick>SendClick(20)</onclick>
 						<font>Med24</font>
 						<label>$VAR[RandomValue]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1003" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<width>182</width>
 						<height>100</height>
 						<onup>50</onup>
 						<onclick>SendClick(26)</onclick>
 						<font>Med24</font>
 						<label>$VAR[RepeatValue]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="21" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<width>151</width>
 						<height>100</height>
 						<onup>50</onup>
 						<font>Med24</font>
 						<label>$LOCALIZE[31094]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>!StringCompare(Playlist.Length(video),0)</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="22" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<width>151</width>
 						<height>100</height>
 						<onup>50</onup>
 						<font>Med24</font>
 						<label>$LOCALIZE[31095]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1004" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<width>151</width>
 						<height>100</height>
 						<onup>50</onup>
@@ -385,11 +386,11 @@
 						<onclick>SetFocus(5001)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31089]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 				</control>
 			</control>

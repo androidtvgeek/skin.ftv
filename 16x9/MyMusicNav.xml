@@ -111,8 +111,9 @@
 				<include>VisibleDelayFadeAnimation</include>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
+					<left>-10</left>
 					<height>100</height>
-					<itemgap>10</itemgap>
+					<itemgap>0</itemgap>
 					<onleft condition="!Control.IsVisible(54)">SetFocus(50)</onleft>
 					<onleft condition="Control.IsVisible(54)">Back</onleft>
 					<onleft condition="Control.IsVisible(54)">SetFocus(50)</onleft>
@@ -122,7 +123,7 @@
 					<defaultcontrol always="true">1001</defaultcontrol>
 					<!-- Dummy to always set focus to first visible button -->
 					<control id="1001" type="button">
-						<width>-10</width>
+						<width>0</width>
 						<height>0</height>
 						<label>-</label>
 						<onfocus>Right</onfocus>
@@ -130,8 +131,8 @@
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(1006) + !Control.HasFocus(1007) + !Control.HasFocus(20) + !Control.HasFocus(16)</visible>
 					</control>
 					<control id="1002" type="button">
-						<include condition="SubString(System.Language,English)">Width184</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -141,78 +142,78 @@
 						<onclick>SetProperty(OpenMusicInformation,1,home)</onclick>
 						<font>Med24</font>
 						<label>$VAR[MusicType][CR]Information</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>!StringCompare(ListItem.Label,..) + !Control.IsVisible(54) + [Container.Content(artists) | Container.Content(albums)]</visible>
 					</control>
 					<control id="1005" type="button">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick condition="!StringCompare(Playlist.Length(music),0)">ActivateWindow(musicplaylist)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31088]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>!StringCompare(Playlist.Length(music),0)</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1006" type="button">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(5001)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31089]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1007" type="button">
-						<include condition="SubString(System.Language,English)">Width164</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick>Fullscreen</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31166]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>Player.HasAudio</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="16" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(50)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31163]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="20" type="togglebutton">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -220,15 +221,15 @@
 						<font>Med24</font>
 						<label>$LOCALIZE[31090]</label>
 						<altlabel>$LOCALIZE[31091]</altlabel>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>Control.IsEnabled(20)</visible>
 						<usealttexture>Library.IsScanningMusic</usealttexture>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
-						<alttexturefocus border="3,5,6,8">views/button_fo.png</alttexturefocus>
-						<alttexturenofocus border="3,3,6,6">views/button_nf.png</alttexturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
+						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
 					</control>
 				</control>
 				<!-- Details -->

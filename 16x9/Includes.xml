@@ -394,39 +394,4 @@
 		<texturefocus border="2">dialogs/KeyboardButtonFO.png</texturefocus>
 		<texturenofocus border="2">dialogs/KeyboardButtonNF.png</texturenofocus>
 	</include>
-	<!-- English button widths -->
-	<include name="Width134">
-		<width>134</width>
-	</include>
-	<include name="Width154">
-		<width>154</width>
-	</include>
-	<include name="Width164">
-		<width>164</width>
-	</include>
-	<include name="Width174">
-		<width>174</width>
-	</include>
-	<include name="Width184">
-		<width>184</width>
-	</include>
-	<include name="Width194">
-		<width>194</width>
-	</include>
-	<include name="Left174">
-		<left>-174</left>
-	</include>
-	<!-- Non-English button width -->
-	<include name="WidthDefault">
-		<width>240</width>
-	</include>
-	<include name="WidthInfoDefault">
-		<width>190</width>
-	</include>
-	<include name="WidthDefaultLabel">
-		<width>220</width>
-	</include>
-	<include name="Left210">
-		<left>-230</left>
-	</include>
 </includes>

@@ -179,11 +179,11 @@
 				<onclick>ActivateWindow(ShutdownMenu)</onclick>
 				<font>Med24</font>
 				<label>$LOCALIZE[31085]</label>
-				<textoffsetx>20</textoffsetx>
+				<textoffsetx>28</textoffsetx>
 				<textcolor>ffdadada</textcolor>
 				<focusedcolor>ff222222</focusedcolor>
-				<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-				<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+				<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+				<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 			</control>
 		</control>
 	</controls>

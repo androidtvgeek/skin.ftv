@@ -269,8 +269,9 @@
 				<visible>IsEmpty(Container.PluginName) + [Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
+					<left>-10</left>
 					<height>100</height>
-					<itemgap>10</itemgap>
+					<itemgap>0</itemgap>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<orientation>horizontal</orientation>
@@ -278,7 +279,7 @@
 					<defaultcontrol always="true">1001</defaultcontrol>
 					<!-- Dummy to always set focus to first visible button -->
 					<control id="1001" type="button">
-						<width>-10</width>
+						<width>0</width>
 						<height>0</height>
 						<label>-</label>
 						<onfocus>Right</onfocus>
@@ -286,8 +287,8 @@
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(20) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005)</visible>
 					</control>
 					<control id="1002" type="button">
-						<include condition="SubString(System.Language,English)">Width184</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -296,16 +297,16 @@
 						<onclick>SetProperty(OpenMovieInformation,1,home)</onclick>
 						<font>Med24</font>
 						<label>[CAPITALIZE]$VAR[VideoType][CR]$LOCALIZE[19033][/CAPITALIZE]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>!StringCompare(ListItem.Label,..) + !SubString(Container.FolderName,$LOCALIZE[20434]) + !SubString(ListItem.Path,videodb://movies/sets,left)</visible>
 					</control>
 					<control id="1003" type="button">
-						<include condition="SubString(System.Language,English)">Width134</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -313,47 +314,47 @@
 						<onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31075]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1004" type="button">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick condition="!StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31088]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>!StringCompare(Playlist.Length(video),0)</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1005" type="button">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(5001)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31089]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="20" type="togglebutton">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -361,15 +362,15 @@
 						<font>Med24</font>
 						<label>$LOCALIZE[31090]</label>
 						<altlabel>$LOCALIZE[31091]</altlabel>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>Control.IsEnabled(20)</visible>
 						<usealttexture>Library.IsScanningVideo</usealttexture>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
-						<alttexturefocus border="3,5,6,8">views/button_fo.png</alttexturefocus>
-						<alttexturenofocus border="3,3,6,6">views/button_nf.png</alttexturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
+						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
 					</control>
 				</control>
 				<!-- Movie / TV Show Details -->
@@ -623,8 +624,9 @@
 				<visible>!IsEmpty(Container.PluginName) | [!Container.Content(movies) + !Container.Content(sets) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]</visible>
 				<!-- Controls -->
 				<control id="1000" type="grouplist">
+					<left>-10</left>
 					<height>100</height>
-					<itemgap>10</itemgap>
+					<itemgap>0</itemgap>
 					<onleft>50</onleft>
 					<onright>50</onright>
 					<orientation>horizontal</orientation>
@@ -632,7 +634,7 @@
 					<defaultcontrol always="true">1001</defaultcontrol>
 					<!-- Dummy to always set focus to first visible button -->
 					<control id="1001" type="button">
-						<width>-10</width>
+						<width>0</width>
 						<height>0</height>
 						<label>-</label>
 						<onfocus>Right</onfocus>
@@ -640,8 +642,8 @@
 						<visible>!Control.HasFocus(1002) + !Control.HasFocus(1003) + !Control.HasFocus(1004) + !Control.HasFocus(1005) + !Control.HasFocus(16)</visible>
 					</control>
 					<control id="1003" type="button">
-						<include condition="SubString(System.Language,English)">Width134</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -649,62 +651,62 @@
 						<onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31075]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1004" type="button">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick condition="!StringCompare(Playlist.Length(video),0)">ActivateWindow(videoplaylist)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31088]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>!StringCompare(Playlist.Length(video),0)</visible>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="1005" type="button">
-						<include condition="SubString(System.Language,English)">Width154</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<onclick>SetFocus(5001)</onclick>
 						<font>Med24</font>
 						<label>$LOCALIZE[31089]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					</control>
 					<control id="16" type="button">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
 						<font>Med24</font>
 						<label>$LOCALIZE[31163]</label>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 						<visible>Container.Content(musicvideos)</visible>
 					</control>
 					<control id="20" type="togglebutton">
-						<include condition="SubString(System.Language,English)">Width194</include>
-						<include condition="!SubString(System.Language,English)">WidthDefault</include>
+						<width min="104" max="194">auto</width>
+						<wrapmultiline>true</wrapmultiline>
 						<height>100</height>
 						<onup>50</onup>
 						<ondown>3000</ondown>
@@ -712,15 +714,15 @@
 						<font>Med24</font>
 						<label>$LOCALIZE[31090]</label>
 						<altlabel>$LOCALIZE[31091]</altlabel>
-						<textoffsetx>20</textoffsetx>
+						<textoffsetx>28</textoffsetx>
 						<textcolor>ffdadada</textcolor>
 						<focusedcolor>ff222222</focusedcolor>
 						<visible>Control.IsEnabled(20) + IsEmpty(Container.PluginName)</visible>
 						<usealttexture>Library.IsScanningVideo</usealttexture>
-						<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-						<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
-						<alttexturefocus border="3,5,6,8">views/button_fo.png</alttexturefocus>
-						<alttexturenofocus border="3,3,6,6">views/button_nf.png</alttexturenofocus>
+						<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+						<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
+						<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
+						<alttexturenofocus border="13,3,6,6">views/button_nf.png</alttexturenofocus>
 					</control>
 				</control>
 				<!-- Details -->

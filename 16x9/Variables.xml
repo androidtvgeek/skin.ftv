@@ -630,8 +630,8 @@
 		<value>$LOCALIZE[1223]</value>
 	</variable>
 	<variable name="RandomiseSlideshow">
-		<value condition="SubString(Control.GetLabel(9),*) + Control.HasFocus(9)">[COLOR ff222222]$LOCALIZE[31043][/COLOR]</value>
-		<value condition="SubString(Control.GetLabel(9),*) + !Control.HasFocus(9)">$LOCALIZE[31043]</value>
+		<value condition="Skin.String(PicturesRandom,on) + Control.HasFocus(9)">[COLOR ff222222]$LOCALIZE[31043][/COLOR]</value>
+		<value condition="Skin.String(PicturesRandom,on) + !Control.HasFocus(9)">$LOCALIZE[31043]</value>
 		<value condition="Control.HasFocus(9)">[COLOR ff222222]$LOCALIZE[31045][/COLOR]</value>
 		<value>$LOCALIZE[31045]</value>
 	</variable>

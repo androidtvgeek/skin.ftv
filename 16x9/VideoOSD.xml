@@ -374,8 +374,8 @@
 					<height>58</height>
 					<font>Reg22</font>
 					<textoffsetx>34</textoffsetx>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,5,6,8">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
 					<label>$LOCALIZE[248] ($INFO[VideoPlayer.SubtitlesLanguage])</label>
 					<onclick>CycleSubtitle</onclick>
 					<onback>SetFocus(12)</onback>
@@ -388,10 +388,10 @@
 					<label>$LOCALIZE[31138]</label>
 					<altlabel>$LOCALIZE[31139]</altlabel>
 					<textoffsetx>34</textoffsetx>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,5,6,8">views/button_nf.png</texturenofocus>
-					<alttexturefocus border="3,5,6,8">views/button_fo.png</alttexturefocus>
-					<alttexturenofocus border="3,5,6,8">views/button_nf.png</alttexturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
+					<alttexturefocus border="13,5,6,8">views/button_fo.png</alttexturefocus>
+					<alttexturenofocus border="13,5,6,8">views/button_nf.png</alttexturenofocus>
 					<usealttexture>VideoPlayer.SubtitlesEnabled</usealttexture>
 					<onclick>ShowSubtitles</onclick>
 					<onback>SetFocus(12)</onback>
@@ -403,8 +403,8 @@
 					<font>Reg22</font>
 					<label>$LOCALIZE[31140]</label>
 					<textoffsetx>34</textoffsetx>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,5,6,8">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,5,6,8">views/button_nf.png</texturenofocus>
 					<onclick>Close</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 					<onclick>ActivateWindow(SubtitleSearch)</onclick>

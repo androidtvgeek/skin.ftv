@@ -327,11 +327,11 @@
 			</control>
 			<!-- Button grouplist -->
 			<control id="9000" type="grouplist">
-				<left>-2</left>
+				<left>-12</left>
 				<top>409</top>
 				<width>1620</width>
 				<height>116</height>
-				<itemgap>10</itemgap>
+				<itemgap>0</itemgap>
 				<onleft>7000</onleft>
 				<onright>noop</onright>
 				<orientation>horizontal</orientation>
@@ -340,7 +340,7 @@
 				<animation condition="Control.HasFocus(1000) | Control.HasFocus(150)" effect="slide" end="0,-192" start="0,0" time="200">Conditional</animation>
 				<!-- Dummy to always set focus to first visible button -->
 				<control id="9001" type="button">
-					<width>-10</width>
+					<width>0</width>
 					<height>0</height>
 					<label>-</label>
 					<onfocus>Right</onfocus>
@@ -349,8 +349,8 @@
 				</control>
 				<!-- Play/Browse Button -->
 				<control id="8" type="button">
-					<include condition="SubString(System.Language,English)">Width174</include>
-					<include condition="!SubString(System.Language,English)">WidthInfoDefault</include>
+					<width min="104" max="194">auto</width>
+					<wrapmultiline>true</wrapmultiline>
 					<height>116</height>
 					<onup condition="!Control.IsVisible(96)">Close</onup>
 					<onup condition="Control.IsVisible(96)">3002</onup>
@@ -358,11 +358,11 @@
 					<ondown condition="Control.IsVisible(1000)">1000</ondown>
 					<font>Med24</font>
 					<label>$LOCALIZE[31109]</label>
-					<textoffsetx>20</textoffsetx>
+					<textoffsetx>28</textoffsetx>
 					<textcolor>ffdadada</textcolor>
 					<focusedcolor>ff222222</focusedcolor>
-					<texturefocus border="3,5,6,8">views/button_fo.png</texturefocus>
-					<texturenofocus border="3,3,6,6">views/button_nf.png</texturenofocus>
+					<texturefocus border="13,5,6,8">views/button_fo.png</texturefocus>
+					<texturenofocus border="13,3,6,6">views/button_nf.png</texturenofocus>
 					<visible>!IsEmpty(Window.Property(movie.DBID))</visible>
 				</control>
 			</control>
