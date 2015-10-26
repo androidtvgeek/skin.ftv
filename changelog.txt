@@ -1,3 +1,8 @@
+2.2.11
+
+Fixed 'Next Up' countdown
+Added Seekbar to music visualisation
+
 2.2.10
 
 Added Arial font support

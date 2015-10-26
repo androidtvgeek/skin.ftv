@@ -179,8 +179,8 @@
 		<value condition="StringCompare(Window(home).Property(SubMenu),8) + IsEmpty(Skin.String(8-WidgetView))">$LOCALIZE[31203]</value>
 	</variable>
 	<variable name="NextEpisodeCountdown">
-		<value condition="IntegerGreaterThan(Player.TimeRemaining(ss),29)">osd/countdown/30.png</value>
-		<value condition="StringCompare(Player.TimeRemaining(ss),29)">$INFO[Player.TimeRemaining(ss),osd/countdown/,.png]</value>
+		<value condition="IntegerGreaterThan(Player.TimeRemaining,29)">osd/countdown/30.png</value>
+		<value>$INFO[Player.TimeRemaining(ss),osd/countdown/,.png]</value>
 	</variable>
 	<variable name="RatingCountry">
 		<value condition="Stringcompare(Skin.String(RatingCountry),US)">$LOCALIZE[31001]</value>
